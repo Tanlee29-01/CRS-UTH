@@ -37,7 +37,7 @@ Hệ thống Đăng ký Học phần dành cho sinh viên UTH, gồm **Backend**
 git init
 git add .
 git commit -m "Initial commit"
-git remote add origin https://github.com/YOUR_USERNAME/CRS.git
+git remote add origin https://github.com/Tanlee29-01/CRS.git
 git push -u origin main
 ```
 
