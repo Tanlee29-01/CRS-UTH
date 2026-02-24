@@ -1,0 +1,38 @@
+databases:
+  - name: crs-db
+    plan: free
+    databaseName: crs
+    user: crs_user
+
+services:
+  - type: web
+    name: crs-backend
+    plan: free
+    runtime: python
+    buildCommand: |
+      cd backend && pip install -r requirements.txt
+    startCommand: |
+      cd backend && alembic upgrade head && python -m app.seed && uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHONPATH
+        value: /opt/render/project/src/backend
+      - key: DATABASE_URL
+        fromDatabase:
+          name: crs-db
+          property: connectionString
+      - key: SECRET_KEY
+        generateValue: true
+      - key: FRONTEND_ORIGIN
+        value: https://crs-uth.vercel.app
+      - key: APP_ENV
+        value: production
+      - key: ACCESS_TOKEN_EXPIRE_MINUTES
+        value: 60
+      - key: MAX_CREDITS_PER_TERM
+        value: 18
+      - key: CREDIT_RATE
+        value: 300
+      - key: RATE_LIMIT_PER_MINUTE
+        value: 120
+      - key: PYTHON_VERSION
+        value: 3.12.0

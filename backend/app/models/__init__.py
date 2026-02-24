@@ -1,0 +1,17 @@
+from app.models.audit_log import AuditLog  # noqa: F401
+from app.models.course import Course  # noqa: F401
+from app.models.department import Department  # noqa: F401
+from app.models.enrollment import Enrollment  # noqa: F401
+from app.models.instructor import Instructor  # noqa: F401
+from app.models.meeting_time import MeetingTime  # noqa: F401
+from app.models.override import Override  # noqa: F401
+from app.models.notification import Notification  # noqa: F401
+from app.models.program import Program  # noqa: F401
+from app.models.program_requirement import ProgramRequirement  # noqa: F401
+from app.models.rule import Rule  # noqa: F401
+from app.models.section import Section  # noqa: F401
+from app.models.student import Student  # noqa: F401
+from app.models.student_program import StudentProgram  # noqa: F401
+from app.models.term import Term  # noqa: F401
+from app.models.user import User  # noqa: F401
+from app.models.waitlist import WaitlistEntry  # noqa: F401
