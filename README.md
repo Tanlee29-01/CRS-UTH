@@ -185,3 +185,4 @@ npm run dev
 - **Backend**: Python 3.12, FastAPI, SQLAlchemy 2, Alembic, PostgreSQL, JWT
 - **Frontend**: React 18, Vite, vanilla CSS (UTH teal theme)
 - **Deploy**: Render (backend + DB) + Vercel (frontend)
+# CRS-UTH
